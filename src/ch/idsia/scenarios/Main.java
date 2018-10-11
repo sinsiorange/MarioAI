@@ -42,13 +42,16 @@ public static void main(String[] args)
 {
 //        final String argsString = "-vis on";
     final MarioAIOptions marioAIOptions = new MarioAIOptions(args);
-    final Agent agent = new RandomAgent();
-    marioAIOptions.setAgent(agent);
+    
 //        final Environment environment = new MarioEnvironment();
 //        final Agent agent = new ForwardAgent();
 //        final Agent agent = marioAIOptions.getAgent();
 //        final Agent a = AgentsPool.loadAgent("ch.idsia.controllers.agents.controllers.ForwardJumpingAgent");
     final BasicTask basicTask = new BasicTask(marioAIOptions);
+    int d = 0;
+    int seed = 80;
+    marioAIOptions.setLevelDifficulty(d);
+    marioAIOptions.setLevelRandSeed(seed);
 //        for (int i = 0; i < 10; ++i)
 //        {
 //            int seed = 0;
